@@ -43,7 +43,10 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pip-
       - name: Install Doxygen (optional for C++ API docs)
-        run: sudo apt-get update && sudo apt-get install -y doxygen
+        run: |
+          if [ -f "Doxyfile" ] || [ -f "docs/Doxyfile" ]; then
+            sudo apt-get update && sudo apt-get install -y doxygen
+          fi
       - name: Install Sphinx and dependencies
         run: |
           pip install sphinx sphinx-rtd-theme
