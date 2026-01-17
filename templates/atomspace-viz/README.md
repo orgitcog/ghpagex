@@ -70,12 +70,13 @@ EOF
 
 for svg_file in public/*.svg; do
     base_name=$(basename "$svg_file")
-    cat >> public/index.html << EOF
-    <div class="viz">
-        <h2>${base_name%.svg}</h2>
-        <img src="$base_name" alt="$base_name">
-    </div>
-EOF
+    display_name="${base_name%.svg}"
+    {
+        echo '    <div class="viz">'
+        echo "        <h2>${display_name}</h2>"
+        echo "        <img src=\"${base_name}\" alt=\"${display_name}\">"
+        echo '    </div>'
+    } >> public/index.html
 done
 
 cat >> public/index.html << 'EOF'
