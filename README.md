@@ -33,6 +33,21 @@ Deploy a Jekyll site with GitHub Pages dependencies preinstalled.
 ### 🟣 [Gatsby](templates/gatsby/)
 Package and deploy a Gatsby site with build caching and optimization.
 
+### 📘 [Docusaurus](templates/docusaurus/)
+Build and deploy a Docusaurus v3 site with React + MDX support. Great for hosting Knowledge Cards, interactive AtomSpace diagrams, and embedding live demos next to documentation.
+
+### 📗 [MkDocs Material](templates/mkdocs-material/)
+Deploy a MkDocs site with Material theme. Python-based docs generator that renders Markdown "as-is", supports Python notebooks via `mkdocs-jupyter`, perfect for Python-heavy workflows.
+
+### 🧠 [Sphinx](templates/sphinx/)
+Build and deploy Sphinx documentation with optional Doxygen integration for C++ API docs. Ideal for generating API documentation from headers and keeping low-level primitives discoverable.
+
+### 🔮 [Quarto](templates/quarto/)
+Publish Quarto sites that convert Jupyter or RMarkdown notebooks into static sites. Perfect for step-by-step walkthroughs, plots, and experiments where readers can download and rerun notebooks.
+
+### ⚙️ [Eleventy (11ty)](templates/eleventy/)
+Deploy an Eleventy site - a super-light Node SSG that doesn't impose a framework. Useful for transforming Markdown directories into HTML with optional JavaScript for interactive features.
+
 ## Usage
 
 1. Browse to the template folder for your framework
