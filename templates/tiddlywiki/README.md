@@ -21,9 +21,24 @@ TiddlyWiki is a unique non-linear personal web notebook. It's a single HTML file
 
 ## Requirements
 
-- A `tiddlywiki.info` file in your wiki folder
+- A `tiddlywiki.info` file in your wiki folder with an `index` build target defined
 - Tiddlers in the `tiddlers/` directory
 - Node.js (automatically installed by the workflow)
+
+**Note**: The workflow uses the `--build index` command. Ensure your `tiddlywiki.info` file has an `index` build target configured, or modify the workflow to use your custom build target. Example `tiddlywiki.info` with build target:
+
+```json
+{
+  "description": "My Wiki",
+  "plugins": [],
+  "themes": [],
+  "build": {
+    "index": [
+      "--rendertiddler", "$:/plugins/tiddlywiki/tiddlyweb/save/offline", "index.html", "text/plain"
+    ]
+  }
+}
+```
 
 ## Features
 
