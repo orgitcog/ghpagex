@@ -6,32 +6,73 @@ GitHub Pages workflow examples and templates for various static site generators 
 
 This repository contains ready-to-use GitHub Actions workflow templates for deploying static sites to GitHub Pages. Each template is in its own folder with documentation and a workflow file.
 
-### 📚 [mdBook](templates/mdbook/)
+### 🧠 Knowledge + Cognition Systems
+
+Ideal for knowledge graphs, documentation, and persistent memory systems.
+
+#### 🧠 [Docusaurus](templates/docusaurus/)
+Great for knowledge graphs, interactive documentation, and persistent memory systems. Perfect for presenting dynamic nodes and cognitive schemas as evolving documentation.
+
+#### 🔮 [Quartz](templates/quartz/)
+Publishing Zettelkasten-style notes and dynamic thought graphs. Ideal for projecting evolving thought-chains with backlink support.
+
+#### 📘 [TiddlyWiki](templates/tiddlywiki/)
+A personal, self-contained knowledge system. Each "tiddler" can represent a node or reservoir for persistent internal state modeling.
+
+#### 📚 [mdBook](templates/mdbook/)
 Package and deploy a site using mdBook, a utility to create modern online books from Markdown files.
 
-### 🌸 [Jekyll](templates/jekyll/)
-Build and deploy a Jekyll site with custom Ruby setup and dependencies.
+### 🌐 Graph & Hypergraph-Friendly
 
-### ⚡ [Hugo](templates/hugo/)
-Package and deploy a Hugo site with extended features and Dart Sass support.
+Perfect for rendering complex relationships, temporal chains, and graph-based content.
 
-### 🚀 [Astro](templates/astro/)
+#### 🪞 [SvelteKit](templates/sveltekit/)
+Reactive, lightweight deployments with easy integration for graph visualization libraries (cytoscape.js, d3.js, hypergraph.js).
+
+#### 🌌 [Eleventy (11ty)](templates/eleventy/)
+Extremely flexible static site generator supporting multiple input formats. Perfect for hypergraph-friendly rendering and distributed membrane logic.
+
+#### ⚙️ [Gridsome](templates/gridsome/)
+Vue-based JAMstack with powerful graph-based content sourcing. Ideal for deploying thematic node systems and knowledge trail visualization.
+
+### 🚀 Modern Frameworks
+
+Popular modern static site generators and frameworks.
+
+#### 🚀 [Astro](templates/astro/)
 Deploy an Astro site with automatic package manager detection.
 
-### 💚 [NuxtJS](templates/nuxtjs/)
+#### 💚 [NuxtJS](templates/nuxtjs/)
 Package and deploy a NuxtJS site with static site generation.
 
-### ⚫ [Next.js](templates/nextjs/)
+#### ⚫ [Next.js](templates/nextjs/)
 Package and deploy a Next.js site with static export configuration.
 
-### 📄 [Static HTML](templates/static-html/)
-Deploy static HTML files without any build process - the simplest option.
+#### 🟣 [Gatsby](templates/gatsby/)
+Package and deploy a Gatsby site with build caching and optimization.
 
-### 🌸 [Jekyll with GitHub Pages](templates/jekyll-gh-pages/)
+### 🌱 Minimal & Flexible
+
+Lightweight, modular generators for evolving systems.
+
+#### 🌐 [Lume](templates/lume/)
+Deno-based static site generator with native TypeScript support and modular architecture.
+
+#### ⚡ [Hugo](templates/hugo/)
+Package and deploy a Hugo site with extended features and Dart Sass support.
+
+#### 🌸 [Jekyll](templates/jekyll/)
+Build and deploy a Jekyll site with custom Ruby setup and dependencies.
+
+#### 🌸 [Jekyll with GitHub Pages](templates/jekyll-gh-pages/)
 Deploy a Jekyll site with GitHub Pages dependencies preinstalled.
 
-### 🟣 [Gatsby](templates/gatsby/)
-Package and deploy a Gatsby site with build caching and optimization.
+### 📄 Simple Deployment
+
+No build process required - just deploy your files.
+
+#### 📄 [Static HTML](templates/static-html/)
+Deploy static HTML files without any build process - the simplest option.
 
 ## Usage
 
