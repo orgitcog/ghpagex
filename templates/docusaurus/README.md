@@ -1,10 +1,16 @@
 # Docusaurus GitHub Pages Template
 
-This template provides a GitHub Actions workflow for building and deploying a Docusaurus v3 site to GitHub Pages.
+This template provides a GitHub Actions workflow for building and deploying a Docusaurus site to GitHub Pages.
 
 ## About Docusaurus
 
-Docusaurus is a React-based documentation engine with MDX support that makes it easy to build, deploy, and maintain open source project websites. It's particularly well-suited for hosting Knowledge Cards, interactive diagrams (via React components), and embedding live demos alongside documentation.
+Docusaurus is a modern static website generator designed for building documentation websites. It's built with React and provides a rich plugin ecosystem, versioning, i18n support, and an excellent developer experience.
+
+## Deep Tree Echo Alignment
+
+**Why Docusaurus**: Great for knowledge graphs, interactive documentation, and persistent memory systems. Works well for presenting **dynamic nodes and cognitive schemas** as evolving documentation or idea spaces.
+
+**Deep Tree Echo fit**: Ideal for projecting knowledge structures, memory beacons, and ESN schema walkthroughs.
 
 ## Usage
 
@@ -17,27 +23,16 @@ Docusaurus is a React-based documentation engine with MDX support that makes it 
 
 - A `package.json` file with Docusaurus dependencies
 - Docusaurus configuration file (`docusaurus.config.js`)
-- `docs/` folder with your Markdown/MDX content
+- Content in the `docs/` and/or `blog/` directories
 
 ## Features
 
-- React + MDX for interactive documentation
-- Built-in versioning and i18n support
 - Automatic package manager detection (npm, yarn, or pnpm)
 - Node.js 20 support
 - Dependency caching for faster builds
-- Optimized production builds
-
-## OpenCog Use Cases
-
-- Host Knowledge Cards with rich formatting
-- Embed interactive AtomSpace diagrams using React components
-- Display live MOSES demos alongside documentation
-- Create searchable API documentation
-- Build interactive tutorials with code playgrounds
+- Built-in support for Docusaurus build output
 
 ## Learn More
 
-- [Docusaurus Documentation](https://docusaurus.io/)
+- [Docusaurus Documentation](https://docusaurus.io/docs)
 - [Docusaurus GitHub Pages Guide](https://docusaurus.io/docs/deployment#deploying-to-github-pages)
-- [How to Set Up Documentation as Code with Docusaurus and GitHub Actions](https://www.freecodecamp.org/news/set-up-docs-as-code-with-docusaurus-and-github-actions/)

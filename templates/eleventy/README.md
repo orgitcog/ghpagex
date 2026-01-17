@@ -1,10 +1,16 @@
 # Eleventy (11ty) GitHub Pages Template
 
-This template provides a GitHub Actions workflow for building and deploying an Eleventy (11ty) site to GitHub Pages.
+This template provides a GitHub Actions workflow for building and deploying an Eleventy site to GitHub Pages.
 
 ## About Eleventy
 
-Eleventy is a simpler static site generator that doesn't impose a framework. It's incredibly flexible and works with multiple template languages (Markdown, Liquid, Nunjucks, etc.). Eleventy is perfect when you want a minimal workflow that transforms Markdown into HTML while allowing custom JavaScript for interactive features.
+Eleventy is a simpler static site generator. It's extremely flexible, supporting multiple template languages (Markdown, Liquid, Nunjucks, Handlebars, Mustache, EJS, Haml, Pug, and JavaScript), and can be shaped to fit any project structure.
+
+## Deep Tree Echo Alignment
+
+**Why Eleventy**: Extremely flexible static site generator that supports multiple input formats and can be shaped into a **hypergraph-friendly renderer**. Lightweight and modular—perfect for mirroring Deep Tree Echo's distributed membrane logic.
+
+**Deep Tree Echo fit**: Suitable for rendering **temporal node chains**, memory partitions, or thematic threads over time.
 
 ## Usage
 
@@ -15,31 +21,18 @@ Eleventy is a simpler static site generator that doesn't impose a framework. It'
 
 ## Requirements
 
-- A `package.json` file with `@11ty/eleventy` dependency
-- Optional: `.eleventy.js` configuration file
-- Content files in supported formats (Markdown, HTML, Liquid, Nunjucks, etc.)
+- A `package.json` file with Eleventy dependencies
+- Eleventy configuration file (`.eleventy.js` or `eleventy.config.js`) - optional but recommended
+- Content files in your source directory
 
 ## Features
 
-- Zero-config by default
-- Support for multiple template languages
-- Fast build times
-- No client-side JavaScript required (but optional)
-- Powerful data cascade system
-- Flexible project structure
-- Plugin ecosystem for extended functionality
-
-## OpenCog Use Cases
-
-- Transform Knowledge Cards directory into searchable HTML
-- Add interactive AtomSpace graph renderers with vanilla JavaScript
-- Create lightweight documentation sites
-- Build custom visualization dashboards
-- Generate static sites from AtomSpace exports
-- Implement custom data pipelines for documentation
+- Automatic package manager detection (npm, yarn, or pnpm)
+- Node.js 20 support
+- Dependency caching for faster builds
+- Configurable output directory
 
 ## Learn More
 
-- [Eleventy Documentation](https://www.11ty.dev/)
-- [Eleventy Quick Tips](https://www.11ty.dev/docs/quicktips/)
-- [Deploy Eleventy to GitHub Pages with GitHub Actions](https://www.rockyourcode.com/how-to-deploy-eleventy-to-github-pages-with-github-actions/)
+- [Eleventy Documentation](https://www.11ty.dev/docs/)
+- [Eleventy Get Started](https://www.11ty.dev/docs/getting-started/)
