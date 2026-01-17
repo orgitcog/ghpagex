@@ -33,6 +33,24 @@ Deploy a Jekyll site with GitHub Pages dependencies preinstalled.
 ### 🟣 [Gatsby](templates/gatsby/)
 Package and deploy a Gatsby site with build caching and optimization.
 
+### 🧠 [Docusaurus](templates/docusaurus/)
+Deploy a Docusaurus documentation site with multi-versioning and MDX support. **Role:** `docs.orchestrator`
+
+### 🧪 [Sphinx](templates/sphinx/)
+Build and deploy Sphinx documentation with MyST Markdown support. **Role:** `specification.daemon`
+
+### 🕸 [MkDocs](templates/mkdocs/)
+Deploy a MkDocs site with Material theme for beautiful hierarchical documentation. **Role:** `control-plane.ui`
+
+### 🧬 [Eleventy](templates/eleventy/)
+Build and deploy an Eleventy (11ty) site with flexible, data-driven architecture. **Role:** `composition.worker`
+
+### 🧭 [Redocly](templates/redocly/)
+Generate and deploy interactive API documentation from OpenAPI specifications. **Role:** `interface.contractor`
+
+### 🧱 [Quartz](templates/quartz/)
+Deploy an Obsidian-based Quartz site with graph navigation and backlinks. **Role:** `knowledge.mesh`
+
 ## Usage
 
 1. Browse to the template folder for your framework
