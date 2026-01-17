@@ -57,14 +57,15 @@ jobs:
           if [ -d "${{ env.DOCS_PATH }}" ]; then
             cd ${{ env.DOCS_PATH }}
             make html
-            cd ..
+            echo "BUILD_OUTPUT=${{ env.DOCS_PATH }}/_build/html" >> $GITHUB_ENV
           else
             sphinx-build -b html . _build/html
+            echo "BUILD_OUTPUT=_build/html" >> $GITHUB_ENV
           fi
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ${{ env.DOCS_PATH }}/_build/html
+          path: ${{ env.BUILD_OUTPUT }}
 
   deploy:
     environment:
