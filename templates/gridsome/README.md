@@ -29,7 +29,7 @@ Gridsome is a Vue.js-powered static site generator that makes it easy to build f
 ## Features
 
 - Automatic package manager detection (npm, yarn, or pnpm)
-- Node.js 18 support (Gridsome compatibility)
+- Node.js 18 support (Node.js 20 has compatibility issues with Gridsome)
 - Dependency caching for faster builds
 - GraphQL data layer support
 

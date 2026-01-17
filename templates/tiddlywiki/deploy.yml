@@ -27,6 +27,8 @@ concurrency:
 env:
   WIKI_PATH: "." # default value when wiki is in root
   # WIKI_PATH: mywiki
+  BUILD_TARGET: "index" # default build target
+  # BUILD_TARGET: custom-target
 
 jobs:
   build:
@@ -47,7 +49,7 @@ jobs:
       - name: Build TiddlyWiki
         run: |
           mkdir -p output
-          tiddlywiki ${{ env.WIKI_PATH }} --build index
+          tiddlywiki ${{ env.WIKI_PATH }} --build ${{ env.BUILD_TARGET }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

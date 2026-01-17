@@ -17,7 +17,8 @@ TiddlyWiki is a unique non-linear personal web notebook. It's a single HTML file
 1. Copy the `deploy.yml` file to `.github/workflows/` in your repository
 2. Update the `branches: [$default-branch]` to match your default branch (e.g., `main` or `master`)
 3. Ensure you have a TiddlyWiki folder structure with `tiddlywiki.info` configuration
-4. Push your changes to trigger the workflow
+4. (Optional) Update the `BUILD_TARGET` environment variable in the workflow if using a custom build target (default is `index`)
+5. Push your changes to trigger the workflow
 
 ## Requirements
 

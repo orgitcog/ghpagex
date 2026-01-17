@@ -25,6 +25,8 @@ Quartz is a fast, batteries-included static site generator that transforms your 
 - Quartz configuration file (`quartz.config.ts`)
 - Markdown content in the `content/` directory
 
+**Note**: The workflow uses `npx quartz build` which is the standard way to build Quartz v4+. If you have Quartz configured as a script in your `package.json`, you can modify the workflow to use `npm run build` instead.
+
 ## Features
 
 - Automatic package manager detection (npm, yarn, or pnpm)
