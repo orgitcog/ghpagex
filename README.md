@@ -33,6 +33,21 @@ Deploy a Jekyll site with GitHub Pages dependencies preinstalled.
 ### 🟣 [Gatsby](templates/gatsby/)
 Package and deploy a Gatsby site with build caching and optimization.
 
+### 💠 [SvelteKit](templates/sveltekit/)
+Package and deploy a SvelteKit app using static site generation or SSR with Supabase integration.
+
+### 🧱 [Remix](templates/remix/)
+Deploy a Remix app with SSR and API integration optimized for Supabase.
+
+### 🧾 [Eleventy (11ty)](templates/eleventy/)
+Build and deploy an Eleventy site with Supabase-powered data at build time.
+
+### 📘 [VitePress](templates/vitepress/)
+Deploy a VitePress-powered documentation site with Supabase API integration.
+
+### ⚙️ [Vite App](templates/vite/)
+Build and deploy a custom Vite-based app with direct Supabase API integration.
+
 ## Usage
 
 1. Browse to the template folder for your framework
