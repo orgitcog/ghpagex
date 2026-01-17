@@ -80,6 +80,7 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
         working-directory: ${{ env.BUILD_PATH }}
       - name: Build with Quartz
+        # Note: Quartz v4 is run as a binary via npx, not as a package.json script
         run: npx quartz build
         working-directory: ${{ env.BUILD_PATH }}
       - name: Upload artifact

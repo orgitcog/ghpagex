@@ -63,7 +63,8 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "18" # Gridsome works best with Node 18
+          # Note: Using Node.js 18 due to known compatibility issues with Gridsome and Node.js 20+
+          node-version: "18"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
           cache-dependency-path: ${{ env.BUILD_PATH }}/${{ steps.detect-package-manager.outputs.lockfile }}
       - name: Setup pnpm

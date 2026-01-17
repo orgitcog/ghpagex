@@ -48,7 +48,7 @@ jobs:
         run: npm install -g tiddlywiki
       - name: Build TiddlyWiki
         run: |
-          mkdir -p output
+          mkdir -p ${{ env.WIKI_PATH }}/output
           tiddlywiki ${{ env.WIKI_PATH }} --build ${{ env.BUILD_TARGET }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
