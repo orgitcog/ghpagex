@@ -104,12 +104,12 @@ jobs:
               for svg_file in public/*.svg; do
                 base_name=$(basename "$svg_file")
                 display_name="${base_name%.svg}"
-                cat >> public/index.html << EOF
-              <div class="viz">
-                  <h2>$display_name</h2>
-                  <img src="$base_name" alt="$display_name">
-              </div>
-          EOF
+                {
+                  echo '              <div class="viz">'
+                  echo "                  <h2>${display_name}</h2>"
+                  echo "                  <img src=\"${base_name}\" alt=\"${display_name}\">"
+                  echo '              </div>'
+                } >> public/index.html
               done
             else
               cat >> public/index.html << 'EOF'

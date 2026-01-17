@@ -45,15 +45,23 @@ jobs:
         run: |
           mkdir -p public
           # Generate HTML with split nodes for better navigation
-          makeinfo --html \
-                   --css-include=style.css \
-                   --output=public \
-                   manual.texi || \
-          # Fallback: if manual.texi doesn't exist, try to find any .texi file
-          makeinfo --html \
-                   --css-include=style.css \
-                   --output=public \
-                   *.texi
+          if [ -f manual.texi ]; then
+            makeinfo --html \
+                     --css-include=style.css \
+                     --output=public \
+                     manual.texi
+          else
+            # Fallback: if manual.texi doesn't exist, try to find any .texi file
+            for texi_file in *.texi; do
+              if [ -f "$texi_file" ]; then
+                makeinfo --html \
+                         --css-include=style.css \
+                         --output=public \
+                         "$texi_file"
+                break
+              fi
+            done
+          fi
       
       - name: Create index redirect (if needed)
         run: |

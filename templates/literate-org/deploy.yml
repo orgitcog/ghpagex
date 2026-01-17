@@ -72,7 +72,9 @@ jobs:
             <ul>
           EOF
             for f in *.html; do
-              [ "$f" != "index.html" ] && echo "      <li><a href=\"$f\">$f</a></li>" >> index.html
+              if [ -f "$f" ] && [ "$f" != "index.html" ]; then
+                echo "      <li><a href=\"$f\">$f</a></li>" >> index.html
+              fi
             done
             cat >> index.html << 'EOF'
             </ul>
