@@ -47,15 +47,15 @@ jobs:
         run: |
           if [ -f requirements.txt ]; then
             pip install -r requirements.txt
-          elif [ -f ${{ env.DOCS_PATH }}/requirements.txt ]; then
-            pip install -r ${{ env.DOCS_PATH }}/requirements.txt
+          elif [ -f "${{ env.DOCS_PATH }}/requirements.txt" ]; then
+            pip install -r "${{ env.DOCS_PATH }}/requirements.txt"
           else
             pip install sphinx sphinx-rtd-theme myst-parser
           fi
       - name: Build with Sphinx
         run: |
           if [ -d "${{ env.DOCS_PATH }}" ]; then
-            cd ${{ env.DOCS_PATH }}
+            cd "${{ env.DOCS_PATH }}"
             make html
             echo "BUILD_OUTPUT=${{ env.DOCS_PATH }}/_build/html" >> $GITHUB_ENV
           else
