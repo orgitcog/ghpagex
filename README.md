@@ -74,6 +74,19 @@ No build process required - just deploy your files.
 #### 📄 [Static HTML](templates/static-html/)
 Deploy static HTML files without any build process - the simplest option.
 
+### 📖 Documentation Generators
+
+Specialized tools for technical documentation and API references.
+
+#### 📗 [MkDocs Material](templates/mkdocs-material/)
+Python-based docs generator that renders Markdown "as-is", supports Python notebooks via `mkdocs-jupyter`, perfect for Python-heavy workflows.
+
+#### 🧠 [Sphinx](templates/sphinx/)
+Documentation generator with optional Doxygen integration for C++ API docs. Ideal for generating API documentation from headers and keeping low-level primitives discoverable.
+
+#### 🔮 [Quarto](templates/quarto/)
+Literate notebook generator that converts Jupyter or RMarkdown notebooks into static sites. Perfect for step-by-step walkthroughs, plots, and reproducible experiments.
+
 ## Usage
 
 1. Browse to the template folder for your framework
