@@ -4,9 +4,13 @@ This template provides a GitHub Actions workflow for building and deploying an E
 
 ## About Eleventy
 
-Eleventy is a simpler static site generator and an alternative to Jekyll. It's unopinionated and ideal for service graph assembly with data-driven builds from JSON/YAML/JS for declarative topology. Perfect for monorepos and multi-service outputs.
+Eleventy is a simpler static site generator. It's extremely flexible, supporting multiple template languages (Markdown, Liquid, Nunjucks, Handlebars, Mustache, EJS, Haml, Pug, and JavaScript), and can be shaped to fit any project structure.
 
-**Service Role:** `composition.worker`
+## Deep Tree Echo Alignment
+
+**Why Eleventy**: Extremely flexible static site generator that supports multiple input formats and can be shaped into a **hypergraph-friendly renderer**. Lightweight and modular—perfect for mirroring Deep Tree Echo's distributed membrane logic.
+
+**Deep Tree Echo fit**: Suitable for rendering **temporal node chains**, memory partitions, or thematic threads over time.
 
 ## Usage
 
@@ -17,34 +21,18 @@ Eleventy is a simpler static site generator and an alternative to Jekyll. It's u
 
 ## Requirements
 
-- A `package.json` file with Eleventy (`@11ty/eleventy`) as a dependency
-- Eleventy configuration file (`.eleventy.js` or `eleventy.config.js`) - optional
-- Template files (HTML, Markdown, Nunjucks, etc.)
+- A `package.json` file with Eleventy dependencies
+- Eleventy configuration file (`.eleventy.js` or `eleventy.config.js`) - optional but recommended
+- Content files in your source directory
 
 ## Features
 
-- Unopinionated and flexible architecture
-- Data-driven builds from JSON/YAML/JS
-- Excellent for service graph composition
-- Works well with monorepos
 - Automatic package manager detection (npm, yarn, or pnpm)
 - Node.js 20 support
 - Dependency caching for faster builds
-
-## Service Sketch
-
-```yaml
-EleventyPipeline:
-  type: worker
-  inputs:
-    - service_graphs/*.json
-    - templates/*
-  transforms:
-    - graph_to_pages
-```
+- Configurable output directory
 
 ## Learn More
 
 - [Eleventy Documentation](https://www.11ty.dev/docs/)
-- [Eleventy Getting Started](https://www.11ty.dev/docs/getting-started/)
-- [Eleventy Data Files](https://www.11ty.dev/docs/data/)
+- [Eleventy Get Started](https://www.11ty.dev/docs/getting-started/)

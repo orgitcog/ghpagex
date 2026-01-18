@@ -1,8 +1,8 @@
-# Sample workflow for building and deploying a Sphinx site to GitHub Pages
+# Sample workflow for building and deploying a Quarto site to GitHub Pages
 #
-# To get started with Sphinx see: https://www.sphinx-doc.org/en/master/
+# To get started with Quarto see: https://quarto.org/docs/get-started/
 #
-name: Deploy Sphinx site to Pages
+name: Deploy Quarto site to Pages
 
 on:
   # Runs on pushes targeting the default branch
@@ -35,34 +35,22 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.x'
-      - name: Cache dependencies
-        uses: actions/cache@v4
-        with:
-          path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
-          restore-keys: |
-            ${{ runner.os }}-pip-
-      - name: Install Doxygen (optional for C++ API docs)
+      - name: Install Python dependencies
         run: |
-          if [ -f "Doxyfile" ] || [ -f "docs/Doxyfile" ]; then
-            sudo apt-get update && sudo apt-get install -y doxygen
-          fi
-      - name: Install Sphinx and dependencies
-        run: |
-          pip install sphinx sphinx-rtd-theme
-          if [ -f docs/requirements.txt ]; then pip install -r docs/requirements.txt; fi
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+      - name: Setup Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          version: release
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
-      - name: Build with Sphinx
-        run: |
-          cd docs
-          make html
+      - name: Render Quarto project
+        run: quarto render
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./docs/_build/html
+          path: ./_site
 
   deploy:
     environment:

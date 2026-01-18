@@ -1,8 +1,8 @@
-# Sample workflow for building and deploying a Sphinx site to GitHub Pages
+# Sample workflow for building and deploying a TiddlyWiki to GitHub Pages
 #
-# To get started with Sphinx see: https://www.sphinx-doc.org/en/master/
+# To get started with TiddlyWiki see: https://tiddlywiki.com/
 #
-name: Deploy Sphinx site to Pages
+name: Deploy TiddlyWiki to Pages
 
 on:
   # Runs on pushes targeting the default branch
@@ -24,6 +24,12 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
+env:
+  WIKI_PATH: "." # default value when wiki is in root
+  # WIKI_PATH: mywiki
+  BUILD_TARGET: "index" # default build target
+  # BUILD_TARGET: custom-target
+
 jobs:
   build:
     name: Build
@@ -31,38 +37,23 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Setup Python
-        uses: actions/setup-python@v5
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
-          python-version: '3.x'
-      - name: Cache dependencies
-        uses: actions/cache@v4
-        with:
-          path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
-          restore-keys: |
-            ${{ runner.os }}-pip-
-      - name: Install Doxygen (optional for C++ API docs)
-        run: |
-          if [ -f "Doxyfile" ] || [ -f "docs/Doxyfile" ]; then
-            sudo apt-get update && sudo apt-get install -y doxygen
-          fi
-      - name: Install Sphinx and dependencies
-        run: |
-          pip install sphinx sphinx-rtd-theme
-          if [ -f docs/requirements.txt ]; then pip install -r docs/requirements.txt; fi
-          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          node-version: "20"
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
-      - name: Build with Sphinx
+      - name: Install TiddlyWiki
+        run: npm install -g tiddlywiki
+      - name: Build TiddlyWiki
         run: |
-          cd docs
-          make html
+          mkdir -p ${{ env.WIKI_PATH }}/output
+          tiddlywiki ${{ env.WIKI_PATH }} --build ${{ env.BUILD_TARGET }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./docs/_build/html
+          path: ${{ env.WIKI_PATH }}/output
 
   deploy:
     environment:

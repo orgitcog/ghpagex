@@ -4,9 +4,13 @@ This template provides a GitHub Actions workflow for building and deploying a Do
 
 ## About Docusaurus
 
-Docusaurus is a modern static website generator optimized for building documentation websites. It features native multi-versioning, sidebar navigation as service domain graphs, and MDX support for executable documentation primitives.
+Docusaurus is a modern static website generator designed for building documentation websites. It's built with React and provides a rich plugin ecosystem, versioning, i18n support, and an excellent developer experience.
 
-**Service Role:** `docs.orchestrator`
+## Deep Tree Echo Alignment
+
+**Why Docusaurus**: Great for knowledge graphs, interactive documentation, and persistent memory systems. Works well for presenting **dynamic nodes and cognitive schemas** as evolving documentation or idea spaces.
+
+**Deep Tree Echo fit**: Ideal for projecting knowledge structures, memory beacons, and ESN schema walkthroughs.
 
 ## Usage
 
@@ -19,29 +23,16 @@ Docusaurus is a modern static website generator optimized for building documenta
 
 - A `package.json` file with Docusaurus dependencies
 - Docusaurus configuration file (`docusaurus.config.js`)
-- Documentation content in Markdown/MDX format
+- Content in the `docs/` and/or `blog/` directories
 
 ## Features
 
-- Multi-version documentation support for service evolution timelines
-- Sidebar navigation as bounded context graphs
-- MDX compilation for interactive documentation
 - Automatic package manager detection (npm, yarn, or pnpm)
 - Node.js 20 support
 - Dependency caching for faster builds
-
-## Service Sketch
-
-```yaml
-DocusaurusSite:
-  type: orchestrator
-  workers:
-    - docs.versioner
-    - nav.graph.renderer
-    - mdx.compiler
-```
+- Built-in support for Docusaurus build output
 
 ## Learn More
 
 - [Docusaurus Documentation](https://docusaurus.io/docs)
-- [Docusaurus Deployment Guide](https://docusaurus.io/docs/deployment)
+- [Docusaurus GitHub Pages Guide](https://docusaurus.io/docs/deployment#deploying-to-github-pages)

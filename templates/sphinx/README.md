@@ -4,47 +4,42 @@ This template provides a GitHub Actions workflow for building and deploying a Sp
 
 ## About Sphinx
 
-Sphinx is a powerful documentation generator that makes it easy to create intelligent and beautiful documentation. It excels at formal specifications, RFCs, and protocol definitions with support for MyST Markdown and reStructuredText for strict schemas.
-
-**Service Role:** `specification.daemon`
+Sphinx is a powerful documentation generator that makes it easy to create intelligent and beautiful documentation. It supports multiple output formats, automatic API documentation generation, and extensive customization. With Breathe and Doxygen integration, Sphinx can generate comprehensive API documentation from C++ source code.
 
 ## Usage
 
 1. Copy the `deploy.yml` file to `.github/workflows/` in your repository
 2. Update the `branches: [$default-branch]` to match your default branch (e.g., `main` or `master`)
-3. Ensure you have a `requirements.txt` or `docs/requirements.txt` with Sphinx dependencies
-4. Ensure you have a `conf.py` configuration file in your docs directory
-5. Push your changes to trigger the workflow
+3. Ensure you have a `docs/conf.py` Sphinx configuration file
+4. Push your changes to trigger the workflow
 
 ## Requirements
 
-- A `requirements.txt` file with Sphinx and required extensions
-- Sphinx configuration file (`conf.py`)
-- Documentation source files in reStructuredText or MyST Markdown
+- Sphinx configuration file (`docs/conf.py` or `source/conf.py`)
+- reStructuredText or Markdown source files
+- Optional: `docs/requirements.txt` for Sphinx extensions and themes
+- Optional: Doxygen configuration for C++ API documentation
 
 ## Features
 
-- Support for MyST Markdown and reStructuredText
-- Excellent for API documentation and service contracts
-- Extensible with numerous plugins and themes
-- Python 3.11 support
-- Dependency caching for faster builds
+- Automatic API documentation from docstrings
+- Support for multiple markup formats (reStructuredText, Markdown)
+- Breathe extension for C++ API documentation via Doxygen
+- Extensive theming options (ReadTheDocs, Book, PyData, etc.)
+- Cross-referencing and automatic index generation
+- Math support via MathJax or KaTeX
 
-## Service Sketch
+## OpenCog Use Cases
 
-```yaml
-SphinxBuild:
-  type: daemon
-  inputs:
-    - specs/*
-    - contracts/*
-  outputs:
-    - html
-    - pdf
-```
+- Generate API documentation from C++ headers
+- Document custom AtomSpace Links and evaluators
+- Create comprehensive developer guides
+- Build searchable reference documentation
+- Document low-level primitives alongside high-level concepts
 
 ## Learn More
 
 - [Sphinx Documentation](https://www.sphinx-doc.org/)
-- [MyST Parser](https://myst-parser.readthedocs.io/)
-- [Read the Docs Theme](https://sphinx-rtd-theme.readthedocs.io/)
+- [Breathe Documentation](https://breathe.readthedocs.io/)
+- [Doxygen Manual](https://www.doxygen.nl/manual/)
+- [sphinx-notes/pages GitHub Action](https://github.com/marketplace/actions/sphinx-to-github-pages)
