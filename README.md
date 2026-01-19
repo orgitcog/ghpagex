@@ -55,6 +55,9 @@ Package and deploy a Gatsby site with build caching and optimization.
 
 Lightweight, modular generators for evolving systems.
 
+
+Lightweight, modular generators for evolving systems.
+
 #### 🌐 [Lume](templates/lume/)
 Deno-based static site generator with native TypeScript support and modular architecture.
 
@@ -81,11 +84,17 @@ Specialized tools for technical documentation and API references.
 #### 📗 [MkDocs Material](templates/mkdocs-material/)
 Python-based docs generator that renders Markdown "as-is", supports Python notebooks via `mkdocs-jupyter`, perfect for Python-heavy workflows.
 
+#### 🕸 [MkDocs](templates/mkdocs/)
+Fast documentation generator with Material theme for beautiful hierarchical documentation. Ideal for control plane UIs and system maps.
+
 #### 🧠 [Sphinx](templates/sphinx/)
 Documentation generator with optional Doxygen integration for C++ API docs. Ideal for generating API documentation from headers and keeping low-level primitives discoverable.
 
 #### 🔮 [Quarto](templates/quarto/)
 Literate notebook generator that converts Jupyter or RMarkdown notebooks into static sites. Perfect for step-by-step walkthroughs, plots, and reproducible experiments.
+
+#### 🧭 [Redocly](templates/redocly/)
+Interactive API documentation generator from OpenAPI specifications. Perfect for documenting service interfaces and API contracts.
 
 ## Usage
 
