@@ -1,6 +1,6 @@
 # Sample workflow for building and deploying a SvelteKit site to GitHub Pages
 #
-# To get started with SvelteKit see: https://kit.svelte.dev/
+# To get started with SvelteKit see: https://kit.svelte.dev/docs
 #
 name: Deploy SvelteKit site to Pages
 
@@ -66,6 +66,11 @@ jobs:
           node-version: "20"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
           cache-dependency-path: ${{ env.BUILD_PATH }}/${{ steps.detect-package-manager.outputs.lockfile }}
+      - name: Setup pnpm
+        if: ${{ steps.detect-package-manager.outputs.manager == 'pnpm' }}
+        uses: pnpm/action-setup@v3
+        with:
+          version: 8
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
@@ -73,7 +78,7 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
         working-directory: ${{ env.BUILD_PATH }}
       - name: Build with SvelteKit
-        run: ${{ steps.detect-package-manager.outputs.runner }} build
+        run: ${{ steps.detect-package-manager.outputs.manager }} run build
         working-directory: ${{ env.BUILD_PATH }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

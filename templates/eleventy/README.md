@@ -1,10 +1,16 @@
-# 11ty (Eleventy) GitHub Pages Template
+# Eleventy (11ty) GitHub Pages Template
 
 This template provides a GitHub Actions workflow for building and deploying an Eleventy site to GitHub Pages.
 
 ## About Eleventy
 
-11ty (Eleventy) is a simpler static site generator that lets you interweave templates like runes across formats—Markdown, Nunjucks, Liquid, JS, etc. It's minimal by nature but maximally exploitably flexible. Perfect for recursive layouts or generated lore documentation.
+Eleventy is a simpler static site generator. It's extremely flexible, supporting multiple template languages (Markdown, Liquid, Nunjucks, Handlebars, Mustache, EJS, Haml, Pug, and JavaScript), and can be shaped to fit any project structure.
+
+## Deep Tree Echo Alignment
+
+**Why Eleventy**: Extremely flexible static site generator that supports multiple input formats and can be shaped into a **hypergraph-friendly renderer**. Lightweight and modular—perfect for mirroring Deep Tree Echo's distributed membrane logic.
+
+**Deep Tree Echo fit**: Suitable for rendering **temporal node chains**, memory partitions, or thematic threads over time.
 
 ## Usage
 
@@ -15,17 +21,18 @@ This template provides a GitHub Actions workflow for building and deploying an E
 
 ## Requirements
 
-- A `package.json` file with Eleventy (`@11ty/eleventy`) as a dependency
+- A `package.json` file with Eleventy dependencies
 - Eleventy configuration file (`.eleventy.js` or `eleventy.config.js`) - optional but recommended
+- Content files in your source directory
 
 ## Features
 
 - Automatic package manager detection (npm, yarn, or pnpm)
-- Configurable build path
 - Node.js 20 support
 - Dependency caching for faster builds
+- Configurable output directory
 
 ## Learn More
 
 - [Eleventy Documentation](https://www.11ty.dev/docs/)
-- [Eleventy GitHub Pages Guide](https://www.11ty.dev/docs/deployment/)
+- [Eleventy Get Started](https://www.11ty.dev/docs/getting-started/)

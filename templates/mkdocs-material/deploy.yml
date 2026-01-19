@@ -1,6 +1,6 @@
-# Sample workflow for building and deploying a MkDocs site to GitHub Pages
+# Sample workflow for building and deploying a MkDocs site with Material theme to GitHub Pages
 #
-# To get started with MkDocs see: https://www.mkdocs.org/
+# To get started with MkDocs see: https://www.mkdocs.org/getting-started/
 #
 name: Deploy MkDocs site to Pages
 
@@ -24,9 +24,6 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
-env:
-  PYTHON_VERSION: "3.11"
-
 jobs:
   build:
     name: Build
@@ -37,20 +34,23 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: ${{ env.PYTHON_VERSION }}
-          cache: 'pip'
+          python-version: '3.x'
+      - name: Cache dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+      - name: Install MkDocs and dependencies
+        run: |
+          pip install mkdocs-material
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
-      - name: Install dependencies
-        run: |
-          if [ -f requirements.txt ]; then
-            pip install -r requirements.txt
-          else
-            pip install mkdocs-material
-          fi
       - name: Build with MkDocs
-        run: mkdocs build
+        run: mkdocs build --strict
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

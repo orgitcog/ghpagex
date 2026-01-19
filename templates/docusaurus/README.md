@@ -4,7 +4,13 @@ This template provides a GitHub Actions workflow for building and deploying a Do
 
 ## About Docusaurus
 
-Docusaurus is Facebook's doc-centric React framework—excellent for highly interlinked documentation with versioning and multilingual support. Perfect for when your experiments require version-controlled documentation of branching timelines. Also supports plugins and search indexing.
+Docusaurus is a modern static website generator designed for building documentation websites. It's built with React and provides a rich plugin ecosystem, versioning, i18n support, and an excellent developer experience.
+
+## Deep Tree Echo Alignment
+
+**Why Docusaurus**: Great for knowledge graphs, interactive documentation, and persistent memory systems. Works well for presenting **dynamic nodes and cognitive schemas** as evolving documentation or idea spaces.
+
+**Deep Tree Echo fit**: Ideal for projecting knowledge structures, memory beacons, and ESN schema walkthroughs.
 
 ## Usage
 
@@ -15,17 +21,18 @@ Docusaurus is Facebook's doc-centric React framework—excellent for highly inte
 
 ## Requirements
 
-- A `package.json` file with Docusaurus (`@docusaurus/core`) as a dependency
+- A `package.json` file with Docusaurus dependencies
 - Docusaurus configuration file (`docusaurus.config.js`)
+- Content in the `docs/` and/or `blog/` directories
 
 ## Features
 
 - Automatic package manager detection (npm, yarn, or pnpm)
 - Node.js 20 support
 - Dependency caching for faster builds
-- Supports versioning and i18n
+- Built-in support for Docusaurus build output
 
 ## Learn More
 
-- [Docusaurus Documentation](https://docusaurus.io/)
-- [Docusaurus Deployment Guide](https://docusaurus.io/docs/deployment)
+- [Docusaurus Documentation](https://docusaurus.io/docs)
+- [Docusaurus GitHub Pages Guide](https://docusaurus.io/docs/deployment#deploying-to-github-pages)

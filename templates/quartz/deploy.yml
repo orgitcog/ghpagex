@@ -1,8 +1,8 @@
-# Sample workflow for building and deploying an Eleventy site to GitHub Pages
+# Sample workflow for building and deploying a Quartz site to GitHub Pages
 #
-# To get started with Eleventy see: https://www.11ty.dev/docs/
+# To get started with Quartz see: https://quartz.jzhao.xyz/
 #
-name: Deploy Eleventy site to Pages
+name: Deploy Quartz site to Pages
 
 on:
   # Runs on pushes targeting the default branch
@@ -35,6 +35,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Fetch all history for git info
       - name: Detect package manager
         id: detect-package-manager
         run: |
@@ -77,13 +79,14 @@ jobs:
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
         working-directory: ${{ env.BUILD_PATH }}
-      - name: Build with Eleventy
-        run: ${{ steps.detect-package-manager.outputs.manager }} run build
+      - name: Build with Quartz
+        # Note: Quartz v4 is run as a binary via npx, not as a package.json script
+        run: npx quartz build
         working-directory: ${{ env.BUILD_PATH }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ${{ env.BUILD_PATH }}/_site
+          path: ${{ env.BUILD_PATH }}/public
 
   deploy:
     environment:
