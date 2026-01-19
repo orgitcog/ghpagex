@@ -92,12 +92,40 @@ Build and deploy a Jekyll site with custom Ruby setup and dependencies.
 #### 🌸 [Jekyll with GitHub Pages](templates/jekyll-gh-pages/)
 Deploy a Jekyll site with GitHub Pages dependencies preinstalled.
 
+#### 🦀 [Cobalt](templates/cobalt/)
+Rust-based static site generator that's fast and simple, similar to Jekyll but with better performance.
+
+#### 🔷 [Bridgetown](templates/bridgetown/)
+Modern Ruby-based static site generator, a progressive evolution of Jekyll with modern JavaScript support.
+
 ### 📄 Simple Deployment
 
 No build process required - just deploy your files.
 
 #### 📄 [Static HTML](templates/static-html/)
 Deploy static HTML files without any build process - the simplest option.
+
+### 🔮 WebAssembly & Unconventional Systems
+
+Advanced deployments pushing the boundaries of what's possible with GitHub Pages.
+
+#### 🖥️ [daedalOS Desktop](templates/daedalos/)
+Deploy a complete desktop environment in the browser. Features window management, file system, terminal, code editor, games, and more. Built with React and Next.js.
+
+#### 💻 [WebVM / CheerpX](templates/webvm/)
+Deploy full Linux environments in the browser using WebAssembly. Based on the WebVM project, enables running complete operating systems with networking and persistent storage.
+
+#### 🎮 [Emscripten Projects](templates/emscripten/)
+Compile C/C++ applications to WebAssembly for browser deployment. Perfect for porting games, simulations, or system utilities.
+
+#### 🐍 [Pyodide/JupyterLite](templates/jupyterlite/)
+Run Python and Jupyter notebooks entirely in the browser without a backend server. Full scientific Python stack (NumPy, Pandas, Matplotlib) in a static site.
+
+#### 🌐 [Plan 9 / 9front Explorer](templates/plan9-web/)
+Web-based interface for exploring Plan 9 file systems and concepts. Connect to remote Plan 9 servers via 9P protocol over WebSockets.
+
+#### 🔷 [Inferno Dis VM](templates/inferno-disvm/)
+Deploy the Inferno Dis virtual machine compiled to WebAssembly. Run Limbo programs in the browser with Styx protocol support.
 
 ### 📖 Documentation Generators
 
@@ -133,6 +161,126 @@ Lightning-fast Rust-based static site generator with zero runtime dependencies a
 
 #### 🧼 [Pelican](templates/pelican/)
 Python-based static site generator with extensive plugin support for content pipelines and blog workflows.
+
+## 🚀 Advanced & Impressive Deployments
+
+While GitHub Pages is traditionally used for documentation and simple websites, the community has pushed the boundaries with remarkable implementations:
+
+### 🖥️ System Emulators & Virtual Machines
+
+#### WebVM - Full Linux in the Browser
+[WebVM](https://github.com/leaningtech/webvm) demonstrates one of the most impressive GitHub Pages deployments: a full Linux virtual machine running entirely in the browser using WebAssembly. It includes:
+- Complete x86 virtualization via CheerpX
+- Networking capabilities through Tailscale
+- Persistent storage options
+- A fully functional Linux environment accessible via HTTPS
+
+This proves that GitHub Pages can host complex, stateful applications that were previously unimaginable for static hosting.
+
+#### JSLinux
+Another impressive example running full operating systems (Linux, Windows 2000) in the browser using JavaScript and WebAssembly.
+
+### 🎮 Game Engines & Interactive Experiences
+
+- **Doom, Quake, and Classic Games**: Full game engines compiled to WebAssembly and deployed to GitHub Pages
+- **Unity/Godot WebGL Exports**: Complete 3D games with physics engines and complex interactions
+- **Emulator Collections**: RetroArch, MAME, and other emulators running classic console games
+
+### 🔬 Scientific Computing & Visualization
+
+- **Jupyter Notebooks**: Interactive computational notebooks (via JupyterLite) running Python entirely in-browser
+- **TensorFlow.js Models**: ML model demos with real-time inference
+- **3D Scientific Visualizations**: WebGL-based molecular viewers, astronomy simulations
+
+### 📱 Full-Stack Applications (Frontend Only)
+
+- **VS Code Web**: Browser-based code editors with syntax highlighting and extensions
+- **Figma-like Design Tools**: Vector graphics editors running entirely client-side
+- **Database GUIs**: SQLite running in WebAssembly with full query capabilities
+
+### 🖥️ Desktop Environments in the Browser
+
+#### daedalOS - Complete Desktop Experience
+[daedalOS](https://github.com/DustinBrett/daedalOS) by Dustin Brett is a stunning achievement: a complete desktop environment running entirely in the browser. Features include:
+- **Windows-like Interface**: Start menu, taskbar, window management
+- **File System**: Virtual file system with ZIP/ISO support, drag-and-drop
+- **Built-in Applications**: 
+  - Monaco Editor (VS Code-like code editor)
+  - Terminal emulator
+  - Media player (video/audio)
+  - Web browser within browser
+  - PDF viewer, Markdown viewer
+  - Classic games (Doom, Quake via js-dos)
+  - Paint, notepad, and more
+- **Customization**: Animated wallpapers, themes, persistent desktop state
+- **Modern Web Tech**: Built with React, Next.js, and TypeScript
+
+This demonstrates that GitHub Pages can host fully-featured desktop operating systems with file management, multi-tasking, and rich applications - all without backend infrastructure.
+
+**Live Demo**: [dustinbrett.com](https://dustinbrett.com)
+
+## 🌐 Distributed Systems on GitHub Pages
+
+### Theoretical Approaches for Plan 9 & Inferno
+
+GitHub Pages' static nature presents interesting challenges for distributed systems like Plan 9 or Inferno, but creative solutions exist:
+
+#### Plan 9 Deployment Strategies
+
+**1. WebAssembly Port**
+- Compile Plan 9 components to WASM
+- Use browser as the execution environment
+- Implement 9P protocol over WebSockets (connecting to external servers)
+- Deploy the compiled system as static assets
+
+**2. Hybrid Architecture**
+- Host Plan 9 documentation and command references as static content
+- Provide web-based terminals that connect to remote Plan 9 CPU servers
+- Use GitHub Pages as the UI layer for distributed Plan 9 infrastructure
+
+**3. Read-Only File System Explorer**
+- Deploy a JavaScript-based 9P file system browser
+- Connect to public Plan 9 file servers
+- Render the namespace hierarchy as an interactive web interface
+
+#### Inferno Dis VM Deployment
+
+**Dis VM in Browser**
+- Port the Dis virtual machine to WebAssembly
+- Load Dis bytecode modules as static assets
+- Implement Limbo standard library in JavaScript/WASM
+- Enable Styx protocol (9P equivalent) over WebSockets for remote resources
+
+**Example Implementation Pattern:**
+```yaml
+# .github/workflows/deploy-inferno.yml
+- Compile Dis VM to WebAssembly
+- Package Limbo modules as static .dis files
+- Deploy with a web-based shell/REPL
+- Connect to external Inferno resources via WebRTC or WebSockets
+```
+
+**Real-World Applications:**
+- Educational Inferno environments
+- Distributed computing demonstrations
+- Interactive Limbo programming tutorials
+
+### Other Distributed System Patterns
+
+#### IPFS-Backed GitHub Pages
+- Use GitHub Pages as the entry point
+- Load content from IPFS using js-ipfs
+- Create truly distributed, censorship-resistant sites
+
+#### WebRTC P2P Networks
+- Deploy P2P chat applications
+- Browser-based distributed file sharing
+- Decentralized collaboration tools
+
+#### Service Worker Architectures
+- Implement offline-first distributed apps
+- Background sync and caching strategies
+- Progressive Web Apps (PWAs) with distributed data stores
 
 ## Emacs Lisp & AGI Research Templates
 
