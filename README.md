@@ -109,6 +109,9 @@ Deploy static HTML files without any build process - the simplest option.
 
 Advanced deployments pushing the boundaries of what's possible with GitHub Pages.
 
+#### 🖥️ [daedalOS Desktop](templates/daedalos/)
+Deploy a complete desktop environment in the browser. Features window management, file system, terminal, code editor, games, and more. Built with React and Next.js.
+
 #### 💻 [WebVM / CheerpX](templates/webvm/)
 Deploy full Linux environments in the browser using WebAssembly. Based on the WebVM project, enables running complete operating systems with networking and persistent storage.
 
@@ -194,6 +197,27 @@ Another impressive example running full operating systems (Linux, Windows 2000) 
 - **VS Code Web**: Browser-based code editors with syntax highlighting and extensions
 - **Figma-like Design Tools**: Vector graphics editors running entirely client-side
 - **Database GUIs**: SQLite running in WebAssembly with full query capabilities
+
+### 🖥️ Desktop Environments in the Browser
+
+#### daedalOS - Complete Desktop Experience
+[daedalOS](https://github.com/DustinBrett/daedalOS) by Dustin Brett is a stunning achievement: a complete desktop environment running entirely in the browser. Features include:
+- **Windows-like Interface**: Start menu, taskbar, window management
+- **File System**: Virtual file system with ZIP/ISO support, drag-and-drop
+- **Built-in Applications**: 
+  - Monaco Editor (VS Code-like code editor)
+  - Terminal emulator
+  - Media player (video/audio)
+  - Web browser within browser
+  - PDF viewer, Markdown viewer
+  - Classic games (Doom, Quake via js-dos)
+  - Paint, notepad, and more
+- **Customization**: Animated wallpapers, themes, persistent desktop state
+- **Modern Web Tech**: Built with React, Next.js, and TypeScript
+
+This demonstrates that GitHub Pages can host fully-featured desktop operating systems with file management, multi-tasking, and rich applications - all without backend infrastructure.
+
+**Live Demo**: [dustinbrett.com](https://dustinbrett.com)
 
 ## 🌐 Distributed Systems on GitHub Pages
 
