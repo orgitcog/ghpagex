@@ -96,26 +96,18 @@ Literate notebook generator that converts Jupyter or RMarkdown notebooks into st
 #### 🧭 [Redocly](templates/redocly/)
 Interactive API documentation generator from OpenAPI specifications. Perfect for documenting service interfaces and API contracts.
 
-### 🧬 [11ty (Eleventy)](templates/eleventy/)
-Deploy an Eleventy site with flexible templating across multiple formats (Markdown, Nunjucks, Liquid, JS).
-
-### 🧰 [SvelteKit](templates/sveltekit/)
-Package and deploy a SvelteKit site in static mode—perfect for reactive dashboards and interactive interfaces.
-
-### 🧠 [Zola](templates/zola/)
-Deploy a lightning-fast Zola site—a Rust-based static site generator with instantaneous builds.
-
-### 🧪 [MkDocs](templates/mkdocs/)
-Build and deploy a MkDocs site with support for Material theme—ideal for layered documentation systems.
-
-### 🕳 [Docusaurus](templates/docusaurus/)
-Deploy a Docusaurus site with versioning and multilingual support—Facebook's doc-centric React framework.
-
-### 👁 [Starlight](templates/starlight/)
+#### 👁 [Starlight](templates/starlight/)
 Package and deploy a Starlight site—Astro's documentation-focused framework for modular knowledge graphs.
 
-### 🧼 [Pelican](templates/pelican/)
-Build and deploy a Pelican site—a Python-based static site generator with extensive plugin support.
+### 🗂 Content Management Systems
+
+Static site generators optimized for content-heavy sites and blogs.
+
+#### 🧠 [Zola](templates/zola/)
+Lightning-fast Rust-based static site generator with zero runtime dependencies and instantaneous builds.
+
+#### 🧼 [Pelican](templates/pelican/)
+Python-based static site generator with extensive plugin support for content pipelines and blog workflows.
 
 ## Usage
 
