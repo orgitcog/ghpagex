@@ -54,6 +54,13 @@ Package and deploy a Next.js site with static export configuration.
 #### 🟣 [Gatsby](templates/gatsby/)
 Package and deploy a Gatsby site with build caching and optimization.
 
+#### 🧱 [Remix](templates/remix/)
+Full-stack framework with SSR and API integration. Designed for dynamic data fetching with seamless API integration.
+
+#### ⚙️ [Vite App](templates/vite/)
+Modern build tool for custom apps with direct API integration. Perfect for small to mid-sized apps using Vite.
+
+### 🌱 Minimal & Flexible
 ### 🌱 Minimal & Flexible
 
 Lightweight, modular generators for evolving systems.
@@ -114,6 +121,9 @@ Interactive API documentation generator from OpenAPI specifications. Perfect for
 #### 👁 [Starlight](templates/starlight/)
 Package and deploy a Starlight site—Astro's documentation-focused framework for modular knowledge graphs.
 
+#### 📘 [VitePress](templates/vitepress/)
+Vite-powered static site generator designed for building fast, content-focused documentation sites with Vue ecosystem support.
+
 ### 🗂 Content Management Systems
 
 Static site generators optimized for content-heavy sites and blogs.
@@ -123,6 +133,7 @@ Lightning-fast Rust-based static site generator with zero runtime dependencies a
 
 #### 🧼 [Pelican](templates/pelican/)
 Python-based static site generator with extensive plugin support for content pipelines and blog workflows.
+
 ## Emacs Lisp & AGI Research Templates
 
 These templates are particularly useful for Emacs Lisp implementations, OpenCog, AGI research, and technical documentation in Emacs environments.
