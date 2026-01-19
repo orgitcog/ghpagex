@@ -37,6 +37,9 @@ Vue-based JAMstack with powerful graph-based content sourcing. Ideal for deployi
 
 ### 🚀 Modern Frameworks
 
+
+### 🚀 Modern Frameworks
+
 Popular modern static site generators and frameworks.
 
 #### 🚀 [Astro](templates/astro/)
@@ -52,6 +55,18 @@ Package and deploy a Next.js site with static export configuration.
 Package and deploy a Gatsby site with build caching and optimization.
 
 ### 🌱 Minimal & Flexible
+
+Lightweight, modular generators for evolving systems.
+
+
+Lightweight, modular generators for evolving systems.
+
+#### 🌐 [Lume](templates/lume/)
+Deno-based static site generator with native TypeScript support and modular architecture.
+
+#### ⚡ [Hugo](templates/hugo/)
+Package and deploy a Hugo site with extended features and Dart Sass support.
+
 
 Lightweight, modular generators for evolving systems.
 
@@ -96,6 +111,18 @@ Literate notebook generator that converts Jupyter or RMarkdown notebooks into st
 #### 🧭 [Redocly](templates/redocly/)
 Interactive API documentation generator from OpenAPI specifications. Perfect for documenting service interfaces and API contracts.
 
+#### 👁 [Starlight](templates/starlight/)
+Package and deploy a Starlight site—Astro's documentation-focused framework for modular knowledge graphs.
+
+### 🗂 Content Management Systems
+
+Static site generators optimized for content-heavy sites and blogs.
+
+#### 🧠 [Zola](templates/zola/)
+Lightning-fast Rust-based static site generator with zero runtime dependencies and instantaneous builds.
+
+#### 🧼 [Pelican](templates/pelican/)
+Python-based static site generator with extensive plugin support for content pipelines and blog workflows.
 ## Emacs Lisp & AGI Research Templates
 
 These templates are particularly useful for Emacs Lisp implementations, OpenCog, AGI research, and technical documentation in Emacs environments.
