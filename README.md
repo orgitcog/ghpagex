@@ -55,6 +55,9 @@ Package and deploy a Gatsby site with build caching and optimization.
 
 Lightweight, modular generators for evolving systems.
 
+
+Lightweight, modular generators for evolving systems.
+
 #### 🌐 [Lume](templates/lume/)
 Deno-based static site generator with native TypeScript support and modular architecture.
 
