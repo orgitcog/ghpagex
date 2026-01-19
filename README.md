@@ -37,6 +37,9 @@ Vue-based JAMstack with powerful graph-based content sourcing. Ideal for deployi
 
 ### 🚀 Modern Frameworks
 
+
+### 🚀 Modern Frameworks
+
 Popular modern static site generators and frameworks.
 
 #### 🚀 [Astro](templates/astro/)
@@ -58,6 +61,22 @@ Full-stack framework with SSR and API integration. Designed for dynamic data fet
 Modern build tool for custom apps with direct API integration. Perfect for small to mid-sized apps using Vite.
 
 ### 🌱 Minimal & Flexible
+### 🌱 Minimal & Flexible
+
+Lightweight, modular generators for evolving systems.
+
+
+Lightweight, modular generators for evolving systems.
+
+#### 🌐 [Lume](templates/lume/)
+Deno-based static site generator with native TypeScript support and modular architecture.
+
+#### ⚡ [Hugo](templates/hugo/)
+Package and deploy a Hugo site with extended features and Dart Sass support.
+
+
+Lightweight, modular generators for evolving systems.
+
 
 Lightweight, modular generators for evolving systems.
 
