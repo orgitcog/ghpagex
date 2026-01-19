@@ -37,6 +37,9 @@ Vue-based JAMstack with powerful graph-based content sourcing. Ideal for deployi
 
 ### 🚀 Modern Frameworks
 
+
+### 🚀 Modern Frameworks
+
 Popular modern static site generators and frameworks.
 
 #### 🚀 [Astro](templates/astro/)
@@ -52,6 +55,18 @@ Package and deploy a Next.js site with static export configuration.
 Package and deploy a Gatsby site with build caching and optimization.
 
 ### 🌱 Minimal & Flexible
+
+Lightweight, modular generators for evolving systems.
+
+
+Lightweight, modular generators for evolving systems.
+
+#### 🌐 [Lume](templates/lume/)
+Deno-based static site generator with native TypeScript support and modular architecture.
+
+#### ⚡ [Hugo](templates/hugo/)
+Package and deploy a Hugo site with extended features and Dart Sass support.
+
 
 Lightweight, modular generators for evolving systems.
 
@@ -108,6 +123,24 @@ Lightning-fast Rust-based static site generator with zero runtime dependencies a
 
 #### 🧼 [Pelican](templates/pelican/)
 Python-based static site generator with extensive plugin support for content pipelines and blog workflows.
+## Emacs Lisp & AGI Research Templates
+
+These templates are particularly useful for Emacs Lisp implementations, OpenCog, AGI research, and technical documentation in Emacs environments.
+
+### 📝 [Org Mode (ox-publish)](templates/org-mode/)
+Deploy technical documentation using Org Mode's built-in publishing system. Native to Emacs, lightweight, supports inline Emacs Lisp execution. Perfect for literate programming and documenting OpenCog/AGI projects with embedded code, results, and theory.
+
+### 🧠 [Org-Roam](templates/org-roam/)
+Deploy Zettelkasten-style knowledge bases from org-roam or Denote notes as searchable static sites. Knowledge graphs are integral to AGI development, and org-roam mirrors Hyperon's link structures.
+
+### 📖 [Texinfo HTML](templates/texinfo/)
+Generate HTML manuals from Texinfo `.texi` files using GNU's standard documentation format. Ideal for publishing Emacs Lisp system documentation such as AtomSpace or PLN modules.
+
+### 🔬 [Literate Org (org-babel)](templates/literate-org/)
+Create reproducible documents with executable code blocks using Org Babel (similar to Jupyter notebooks). Perfect for OpenCog-based reasoning experiments and PLN rule exploration.
+
+### 🌐 [AtomSpace Visualizations](templates/atomspace-viz/)
+Generate and deploy AtomSpace graph visualizations, attention values, and PLN inference traces. Converts `.dot` files to SVG via Graphviz and embeds them in HTML. Makes AGI system internals visible and explorable through the web.
 
 ## Usage
 
