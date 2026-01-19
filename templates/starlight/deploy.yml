@@ -1,8 +1,8 @@
-# Sample workflow for building and deploying an Eleventy site to GitHub Pages
+# Sample workflow for building and deploying a Starlight site to GitHub Pages
 #
-# To get started with Eleventy see: https://www.11ty.dev/docs/
+# To get started with Starlight see: https://starlight.astro.build/
 #
-name: Deploy Eleventy site to Pages
+name: Deploy Starlight site to Pages
 
 on:
   # Runs on pushes targeting the default branch
@@ -66,24 +66,22 @@ jobs:
           node-version: "20"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
           cache-dependency-path: ${{ env.BUILD_PATH }}/${{ steps.detect-package-manager.outputs.lockfile }}
-      - name: Setup pnpm
-        if: ${{ steps.detect-package-manager.outputs.manager == 'pnpm' }}
-        uses: pnpm/action-setup@v3
-        with:
-          version: 8
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
         working-directory: ${{ env.BUILD_PATH }}
-      - name: Build with Eleventy
-        run: ${{ steps.detect-package-manager.outputs.manager }} run build
+      - name: Build with Starlight
+        run: |
+          ${{ steps.detect-package-manager.outputs.runner }} astro build \
+            --site "${{ steps.pages.outputs.origin }}" \
+            --base "${{ steps.pages.outputs.base_path }}"
         working-directory: ${{ env.BUILD_PATH }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ${{ env.BUILD_PATH }}/_site
+          path: ${{ env.BUILD_PATH }}/dist
 
   deploy:
     environment:
